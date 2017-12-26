@@ -1,0 +1,84 @@
+source file 
+
+https://s3.console.aws.amazon.com/s3/buckets/tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Exceptiontest/?region=us-east-1&tab=overview
+
+py file path 
+
+https://s3.console.aws.amazon.com/s3/object/tb-us-east-1-dev-script/EMRScripts/LocationMasterRQ4Parquet.py?region=us-east-1&tab=overview
+
+
+
+
+The Scenarios you need to handle:
+------------------------------------------------------
+
+Each source file is readable in csv format; and starting from header one , no blank space inside source files.
+
+LOC_TYPE should not be NULL
+
+STORE_TIER should not be NULL
+
+DTV_NOW_IND should not be NULL
+
+STORE_HIER_ID should not be NULL
+
+BAE_WRKDAY_ID & BSIS_WRKDAY_ID should not be NULL.
+
+Store number should not be NULL
+
+General location note column should not contain data not falling under accepted range.
+
+Mon-Fri 10am-9pm, Sat 10am-8pm, Sun 12pm-6pm
+Mon-Sat 10am-8pm, Sun Closed
+Mon-Sat 10am-8pm, Sun 10am-6pm
+
+Mon-Friday 9-8 / Saturday 10-7 / Sunday 11-5
+Mon-Sat 9am-8pm, Sun 10am-7pm
+Mon-Sat 10am-8pm, 11am - 6pm
+Mon-Fri 9am-6pm, Sat 10am-5pm, Sun Closed
+Mon-Thur 10am-7pm, Fri 10am-5pm, Sat Closed, Sun 10am-5pm
+Mon-Sat 10-7 Sun Closed
+
+
+
+if(gl not match pttern with Mon-Fri 10am-9pm, Sat 10am-8pm, Sun 12pm-6pm) or 
+(gl not match pttern with Mon-Sat 10am-8pm, Sun Closed) or
+(gl not match pttern with Mon-Sat 10am-8pm, Sun 10am-6pm)
+
+Then throw exception and push msg to s3 file.
+
+
+Mon-Fri 10am-9pm, Sat 10am-8pm, Sun 12pm-6pm
+...-... ....-..., ... ....-..., ... ....-...
+
+
+
+Mon-Sat 10am-8pm, Sun Closed
+...-... ....-..., ... ......
+
+
+Mon-Sat 10am-8pm, Sun 10am-6pm
+...-... ....-..., ... ....-...
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ try:
+        prompt = input("\n Hello to Sudoku valitator,"
+    "\n \n Please type in the path to your file and press 'Enter': ")
+        break
+    except (FileNotFoundError, IOError):
+        print("Wrong file or file path")
+-----------------------------------------------------------------------------------------------------------------------
+
+"s3://tb-us-east-1-dev-script/EMRScripts/EmployeeOperationalEfficiencyCSVToParquet_updated.py",
+"s3://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Employee/EmployeeOperationalScorecard/OperationalEfficiencyScorecard_201712111212.csv",
+"s3://tb-us-east-1-dev-discovery-regular/EmployeeOperationalEfficiencyOutput"]
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+SalesLead 
+
+
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/StoreDealerAssociationRefine201711241001/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/ATTDealerCodeRefine201711241001/*.parquet",
+"s3n://tb-us-east-1-dev-discovery-regular/SalesLeadOutput/part-00000-db3bfc47-3a36-4764-a132-1eb05c7a2694-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv ",
+"s3://tb-us-east-1-dev-refined-regular/SalesLead",
+
+
+
+B2B Credit Request
+
+B2BCreditReqRefineInp = sys.argv[1]
+CompanyInp = sys.argv[2]
+EmployeeRefInp = sys.argv[3]	
+B2BCreditReqRefineOP = sys.argv[4]
+FileTime = sys.argv[5]
+
+
+
+
+
+
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/SalesDetailsRefined_Updated.py",
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/part-00000-28aa93d1-83fe-469e-986f-8077baf69e20-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/part-00000-88fe2748-5789-47ca-8396-02ed8cdc6297-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-discovery-regular/SalesDetailsOutput/2017/12/SalesDetailsOP2017/part-00000-9048f86a-fede-4016-a63c-fb2305d439f3-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv",
+"s3://tb-us-east-1-dev-refined-regular/SaleDetail","2017" 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,200 @@
+
+--------------------------------------------------------------------------------------------------
+
+yogesh 
+"s3n://tb-us-east-1-dev-script/EMRScripts/SalesLeadRefined_updated.py", 
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/*.parquet", 
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet", 
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/StoreDealerAssociationRefine201711241001/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/ATTDealerCodeRefine201711241001/*.parquet", 
+"s3n://tb-us-east-1-dev-discovery-regular/SalesLeadOutput/part-00000-db3bfc47-3a36-4764-a132-1eb05c7a2694-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv", 
+"s3://tb-us-east-1-dev-refined-regular/SalesLeadRefine"] 
+--------------------------------------------------------
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+purchase order  ------- refined *******************
+
+"s3://tb-us-east-1-dev-script-qa/PurchaseOrderDetailsReportRef_updated.py",
+"s3://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv", 
+"s3://tb-us-east-1-dev-discovery-regular/ReceivingInvoicePurchaseOrder/2017/12/ParquetPurchaseOrder2017/part-00000-de771cab-295f-43ad-8a7d-8e27640d5c73-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/StoreDealerAssociationRefine201711241001/*.parquet",
+"s3://tb-us-east-1-dev-discovery-regular/Store/2017/11/Dealer201711241001/part-00000-de0f522b-a842-4bfb-84b4-4931d7538022-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/*.parquet",
+"s3n://tb-us-east-1-dev-refined-regular/Product/2017/11/PRODUCT201711241310/part-00000-7822a464-943e-4f42-a214-e9b2d43afd5e-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/PurchaseOrder","2017"]
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+store inventory  ----- refined 
+
+"s3://tb-us-east-1-dev-script/EMRScripts/StoreInventoryRefined_updated.py",
+"s3://tb-us-east-1-dev-discovery-regular/StoreInventoryOutput/2017/12/SpringCommunications_Inventory2017/part-00000-004eb7e7-4025-4bb4-8c7e-57f997f08fee-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreInventory","2017"]
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Receiving invoice -- refined******************** 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/ReceivingInvoiceHistoryRef_updated.py",
+"s3n://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv", 
+"s3n://tb-us-east-1-dev-discovery-regular/ReceivingInvoicePurchaseOrder/2017/12/ParquetReceivingInvoice2017/part-00000-59cdf998-4805-44e6-b24c-71e7471f6aa0c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-discovery-regular/Store/2017/11/Dealer201711241001/part-00000-de0f522b-a842-4bfb-84b4-4931d7538022-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/StoreDealerAssociationRefine201711241001/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/ReceivingInvoiceHistory","2017"]
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ATT shipping details  -------- refined /***********
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/ATTShippingDetailsRef_updated.py",
+"s3n://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv", 
+"s3n://tb-us-east-1-dev-discovery-regular/ATTShippingDetail/2017/12/ParquetATTShippingDetail2017/part-00000-f32a99b2-41d1-4904-aa11-f97bd156b907-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-refined-regular/Product/2017/11/PRODUCT201711241310/part-00000-7822a464-943e-4f42-a214-e9b2d43afd5e-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/ATTShippingDetail","2017"]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+ATT sales actuals Refined
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/ATTSalesActualsRef_updated.py",
+"s3n://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv",
+"s3n://tb-us-east-1-dev-discovery-regular/ATTSalesActualOutput/2017/12/ParquetATTSalesactuals2017/part-00000-560b4d8c-0b57-48f9-9615-8a8fd49c2e0a-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/StoreDealerAssociationRefine201711241001/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/ATTShippingDetail","2017"]
+
+
+
+
+*****************************delivery*******************************************************************************************************************************************
+s3://file_name.py(delivery file),
+s3://input for delivery i.e output for refined,
+s3://delivery layer folders are already created just give the apth that's it,
+"2017"
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+store payroll delivery 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/StorePayrollDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/StorePayroll/2017/12/StorePayrollRefine2017120606/part-00000-7de4d238-88c4-44f9-b033-15d984e39f43-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_STORE_PAYRL/Current","2017"]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+store goals delivery *******a.company_code as co_cd removed from delivey py file 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/DimStoreGoalsDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/StoreGoals/2017/12/StoreGoalsTranspose2017/*.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_STORE_GOALS_ACTUALS/Current"]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+B2B credit Request delivery
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/B2BCreditReqDeliveryUpatedDM.py",  took normal delivery py file 
+"s3n://tb-us-east-1-dev-refined-regular/B2BCreditRequest/2017/12/B2BCreditRequest201712071104/part-00000-edc64ec4-6918-43d9-b8bf-8755bcb81d36-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_B2B_CRDT_RQSTS/Current","2017"]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+SalesLead delivery 
+
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/SalesLeadDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/SalesLeadRefineReport/part-00000-6ca5fdc2-fd50-4a1b-8815-ba580e0171a4-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_SALES_LEADS/Current"]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+store inventory delivery 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/DimStoreInventoryDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/StoreInventory/2017/12/DimStoreInventoryRefined2017/part-00000-5e983471-218e-41b7-9ccf-bf41d6029dbe-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_STORE_INV/Current"]
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+ATT sales actuals delivery 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/ATTSalesActualsDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/ATTSalesActualR/2017/12/ATTSalesActual2017/part-00000-9c4c8ac0-ce95-42d7-b91c-49fabb4a8c2e-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_ATT_SALES_ACTLS/Current","2017"]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Receiving Invoice History    - Delivery  
+
+
+"s3://tb-us-east-1-dev-script/EMRScripts/ReceivingInvoicehistoryDelivery.py",
+"s3://tb-us-east-1-dev-refined-regular/ReceivingInvoiceHistory/2017/12/ReceivingInvoiceHistory2017/part-00000-c17d28a2-9410-49ee-8be7-55164ef17b8d-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-delivery-regular/WT_RCV_INVOICE_HIST/Current","2017"]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Purchase order details -  delivery 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/PurchaseOrderdetailsDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/PurchaseOrder/2017/12/PurchaseOrderDetails2017/part-00000-69855708-1a2f-43fd-9962-59041a83acf2-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_PO_DTLS/Current","2017"]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+ATT Shipping details -- delivery 
+
+"s3n://tb-us-east-1-dev-script/EMRScripts/ATTShippingDetailsDelivery.py",
+"s3n://tb-us-east-1-dev-refined-regular/ATTShippingDetail/2017/12/ATTShippingDetails2017/part-00000-a76dc5a6-6a9a-434e-839d-dd1e398168e2-c000.snappy.parquet",
+"s3n://tb-us-east-1-dev-delivery-regular/WT_ATT_SHIP_DTLS/Current","2017"]
+
+------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Receiving invoice history - refined 
+
+"s3://tb-us-east-1-dev-script/EMRScripts/ReceivingInvoiceHistoryRef_updated.py",
+"s3://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/Customer/Company.csv", 
+"s3://tb-us-east-1-dev-discovery-regular/ReceivingInvoicePurchaseOrder/2017/12/ParquetReceivingInvoice2017/part-00000-5137f0ae-0ba6-44cc-8cbc-5b2186aa5488-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreRefine/2017/12/StoreRefined201712060507/*.parquet",
+"s3://tb-us-east-1-dev-refined-regular/Store/2017/11/ATTDealerCodeRefine201711241001/part-00000-cf529d20-51a0-4c21-bf2b-dd9e99b80c4f-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/EmployeeRefine/2017/11/EmployeeRefine201411240546/*.parquet",
+"s3://tb-us-east-1-dev-discovery-regular/Store/2017/11/Dealer201711241001/part-00000-de0f522b-a842-4bfb-84b4-4931d7538022-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/ReceivingInvoiceHistory","2017"]
+
+
+
+
+file format is not csv
+source file has any blank
+
+
+
+
+
+
+
+
+"s3://tb-us-east-1-dev-script/EMRScripts/par2csv.py",
+"s3://tb-us-east-1-dev-refined-regular/StoreGoals/2017/12/StoreGoalsTranspose2017/part-00000-9512e9f5-538c-4bee-b6d4-c23f8c68d95d-c000.snappy.parquet",
+"s3://tb-us-east-1-dev-refined-regular/StoreGoals/csvf",
+
+
+
+
+
+
+
+
+  "s3n://tb-us-east-1-dev-script/EMRScripts/DimStoreGoalsDelivery.py",
+                "s3n://tb-us-east-1-dev-refined-regular/StoreGoals/2017/12/StoreGoalsTranspose2017/*.parquet",
+                "s3n://tb-us-east-1-dev-delivery-regular/WT_STORE_GOALS_ACTUALS/Current"]
+

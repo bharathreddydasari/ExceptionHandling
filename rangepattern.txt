@@ -1,0 +1,16 @@
+"s3://tb-us-east-1-dev-script/EMRScripts/dategln_exception.py",
+    
+"s3n://tb-us-east-1-dev-raw-regular-qa/Updated_Files/Location_RQ4_201712041223.csv",
+                
+"s3://exceptionsnsmail/unexpectedrecordFound",
+                
+"s3://tb-us-east-1-dev-raw-regular/tb-us-east-1-dev-raw-emr/unexpectedrecordFound.csv"]
+
+
+
+
+pattern1 = re.compile(r'Mon\-Fri\s+10am\-9pm,\s+Sat\s+10am\-8pm,\s+Sun\s+12pm\-6pm')
+pattern1.match('dfLocationMaster['GeneralLocationNotes']')
+
+
+
